@@ -1,8 +1,12 @@
 from django.http import HttpResponse
 from .models import Activity, Enrollment, Progress
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Hello, world. You're at Naweza-Dash.")
+def landing_page(request):
+    """
+    View function to render the landing page.
+    """
+    return render(request, 'landing.html')
 
 def activity_detail(request, activity_id):
     """
