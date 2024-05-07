@@ -1,41 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Common styles */
 .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-}
-/* Hero section styles */
-.hero {
-    background-color: #f0f0f0;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h2 {
-    margin: 0;
-}
-
-.hero p {
-    margin: 20px 0;
-    color: #555;
-}
-
-.cta-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background-color: #0056b3;
 }
