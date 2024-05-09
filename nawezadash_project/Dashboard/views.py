@@ -14,6 +14,9 @@ def signin_page(request):
     """
     return render(request, 'sign_in.html')
 
+def createaccount_page(request):
+    return render(request, 'create_account.html')
+
 def mydashboard(request):
     #my dashboard view
     return render(request, 'mydashboard.html')
