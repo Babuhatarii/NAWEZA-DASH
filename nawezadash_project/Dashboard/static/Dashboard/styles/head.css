@@ -1,0 +1,40 @@
+/* Header styles */
+header {
+    background-color: #0a0a0a; /* Change background color as needed */
+    padding: 10px 20px;
+}
+
+/* Container styles */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+header h1 {
+    margin: 0;
+}
+
+/* Navigation styles */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    color: floralwhite; /* Change link color as needed */
+    text-decoration: none;
+}
+
+

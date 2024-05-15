@@ -1,5 +1,55 @@
-/* Common styles */
-.container {
-    width: 100%;
-    margin: 0 auto;
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* Container styles */
+.container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+}
+
+/* Background image for body */
+body {
+    background-image: url("/static/Dashboard/images/background-img.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Set text color to contrast with background */
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+}
+
+/* Story styles */
+.story {
+    flex: 1; /* Take up remaining space */
+    padding: 40px;
+    background-color: #0a0a0a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story h2 {
+    font-size: 32px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.story p {
+    font-size: 18px;
+    color: #fdfafa;
+    line-height: 1.6;
+}
+.graphs-bars {
+    flex: 1; /* Take up half of the available space */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
