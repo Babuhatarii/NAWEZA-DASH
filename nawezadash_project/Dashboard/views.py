@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Activity, Enrollment, Progress
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -14,14 +14,13 @@ def landing_page(request):
 
 def signin_page(request):
     if request.method == 'POST':
-        email = request.POST.get('email')
+        username = request.POST.get('username')
         password = request.POST.get('password')
 
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
-
         return redirect('mydashboard_page')
     else:
         messages.error(request, 'Invalid username or password')
@@ -57,20 +56,10 @@ def createaccount_page(request):
 
 def mydashboard_page(request):
     #my dashboard view
-    return render(request, 'dash.html')
+    return render(request, 'my_dash.html')
 
+def list_activities(request):
+    return render(request, 'activities.html')
 
-def activity_detail(request, activity_id):
-    """
-    View function to display details of a specific activity.
-    """
-    activities = Activity.objects.all()
-    """
-    Generate a response containing the list of all activities
-    """
-    response = "\n".join([Activity.name for Activity in activities])
-
-    """Return the response"""
-    return HttpResponse(response)
 
     

@@ -124,7 +124,6 @@ STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
 BASE_DIR / "Dashboard",
-#"Dashboard/static/Dashboard/styles/"
 ]
 
 # Default primary key field type
