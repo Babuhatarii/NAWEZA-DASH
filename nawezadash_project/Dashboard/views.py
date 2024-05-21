@@ -2,6 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from .models import Activity, Enrollment, Progress
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from .forms import SignInForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 
@@ -14,17 +15,23 @@ def landing_page(request):
 
 def signin_page(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(request, username=username, password=password)
-
-        if user is not None:
-            login(request, user)
-        return redirect('mydashboard_page')
+        form = SignInForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('mydashboard_page')
+                else:
+                    messages.error(request, 'create account.')
+            else:
+                messages.error(request, 'Invalid username or password.')
     else:
-        messages.error(request, 'Invalid username or password')
-    return render(request, 'sign_in.html')
+        form = SignInForm()
+    return render(request, 'sign_in.html',{'form': form})
+
 
 def createaccount_page(request):
     if request.method == 'POST':

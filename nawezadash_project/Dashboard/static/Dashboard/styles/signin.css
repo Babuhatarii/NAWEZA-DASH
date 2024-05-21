@@ -1,48 +1,90 @@
 /* Sign-in page styles */
-.sign-in {
-    width: 100%;
-    padding: 50px 20px;
-    text-align: center;
+/* form.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-input[type="email"],
-input[type="password"],
-button {
+h1 {
     margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
-button {
-    background-color: #6da183;
-    color: #fff;
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #5c8c6d;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-.links a {
-    color: #000;
+.extra-actions {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3f1ff5;
+    color: #fff;
+    border-radius: 5px;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.btn-secondary:hover {
+    background-color: #5a6268;
 }
+
 
 
